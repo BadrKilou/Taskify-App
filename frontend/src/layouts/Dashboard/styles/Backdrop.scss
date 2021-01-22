@@ -1,0 +1,28 @@
+.backdrop_dash {
+  background: rgba(63, 61, 61, 0.692);
+
+  position: fixed;
+
+  height: 100%;
+  width: 100%;
+  z-index: -88;
+  transform: translateX(100%);
+  left: 0;
+  top: 0;
+  &.active {
+    background: rgba(63, 61, 61, 0.692);
+    height: 100%;
+    position: fixed;
+    transform: translateX(0%);
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .backdrop_dash {
+    display: none;
+  }
+}

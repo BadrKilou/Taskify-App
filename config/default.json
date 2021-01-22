@@ -1,0 +1,12 @@
+{
+    "mongoURI": "mongodb+srv://badr:kademswigri@badox.vzwxp.mongodb.net/MicroSaaS?retryWrites=true&w=majority",
+    "jwtSecret": "jasaww",
+    "cloudName": "fladerski",
+    "apiKey": "631537992557712",
+    "apiSecret": "9RSRJ2J6pQGBnyt8YgXoaZD8Hg8",
+    "mailgunKey": "8bc103f9d55bd0566eaaf98537048503-2af183ba-bc8fa982",
+    "ResetPassword": "ofolaan1012",
+    "DOMAIN": "sandboxec9c7de7d48b407ebcdd715d0a39b6ba.mailgun.org",
+    "ClientUrl": "http://localhost:3000"
+
+}

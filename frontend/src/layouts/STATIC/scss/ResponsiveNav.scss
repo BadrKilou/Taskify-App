@@ -1,0 +1,177 @@
+@media (max-width: 760px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .nav {
+    overflow: visible;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // height: 30vh;
+    // position: fixed;
+
+    // background: rgba(16, 24, 37, 0.897);
+
+    // z-index: 11;
+    // width: 100%;
+    // border-radius: 5px;
+    // /* transform: translateX(100%); //to the right */
+    // transform: translateX(-104%);
+    // transition: transform 500ms;
+    z-index: 11;
+    height: 0vh;
+    margin: 0;
+    position: relative;
+    padding: 0;
+    width: 100%;
+  }
+  .nav.active {
+    transform: translateX(0);
+    transition: transform 700ms;
+    position: absolute;
+    left: 0;
+
+    z-index: 33 !important;
+  }
+  .links {
+    background: #642b73; /* fallback for old browsers */
+    background: #4d61fc;
+    height: 25vh;
+    width: 100%;
+    z-index: 22 !important;
+    border-radius: 4px;
+    flex-direction: column;
+    clip-path: circle(60px at 90% -20%);
+    -webkit-clip-path: circle(60px at 90% -20%);
+    transition: all 1.5s ease-out;
+    pointer-events: none;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+  }
+  .links.active {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+    z-index: 11;
+  }
+  ul li {
+    list-style: none;
+
+    padding: 12px;
+    width: 100%;
+    margin: 0px;
+  }
+  ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+
+  .nav-tgl {
+    display: inline-block;
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+    right: 20px;
+    top: 5px;
+    position: absolute;
+    width: 60px;
+
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    background: rgb(246, 237, 237);
+    box-shadow: 0px 4px 24px rgba(#000, 0.24);
+    line-height: 0.6;
+    z-index: 200;
+    text-align: center;
+
+    // making the dividers
+    > span {
+      // the second divider
+      display: inline-block;
+      position: relative;
+      height: 2px;
+      width: 34px;
+      border-radius: 1px;
+      background: #293335;
+      vertical-align: middle;
+
+      // the first & the third dividers
+      &:before,
+      &:after {
+        display: inline-block;
+        position: absolute;
+        content: "";
+        height: 2px;
+        border-radius: 1px;
+        background: #293335;
+        // for the hover state
+        transition: all 200ms;
+      }
+      &:before {
+        top: -11px;
+        left: 3px;
+        width: 28px;
+      }
+      &:after {
+        top: 11px;
+        left: 6px;
+        width: 22px;
+      }
+    }
+
+    // ofcorse we should find a replacement for the focus state but it's not our topic
+    &:focus {
+      outline: none;
+    }
+
+    &:hover > span:after,
+    &:hover > span:before {
+      width: 34px;
+      left: 0;
+    }
+  }
+
+  // for the nav background (styling the nav itself is not our topic)
+  .nav:before {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    transition: all 500ms ease-in-out;
+
+    // that's all the pen about
+    clip-path: circle(30px at calc(100% - 65px) 65px);
+    // for AT
+    visibility: hidden;
+  }
+
+  // when it gits activated
+  .menu.active {
+    .nav-tgl > span {
+      height: 0;
+      &:after,
+      &:before {
+        top: 0px;
+        left: 0;
+        width: 34px;
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+$white: #fff;
+$black: #000;
+
+$grey: #ecedf6;
+$dark-grey: #f6f6fa;
+$light-grey: #9391ad;
+$darkest-grey: #cbcbde;
+
+$light-blue: #dde0ed;
+$magenta-blue: #131340;
+$dark-blue: #577bf9;
+$white-smooth: #FEFEFE;
+$blue-fresh: #4D4CAC;
+$pinky: #FF808B;
+$blue-sky: #9698D6;
+$dashboard-color: #F5F5FB;
+$welcome-pinky: #F7E5E9;
+
+$column: 150px minmax(640px, 1fr) 300px;
+
+
+
+
+.form-profile{
+   
+    margin: 18px;
+   padding: 15px;
+   
+   width: 100%;
+   .profile-container{
+      
+       margin: auto;
+       width: 100%;
+
+      
+       .profile{
+           display: flex;
+           transition: 100ms ease-in-out;
+       
+           padding: 12px;
+           justify-content: center;
+    
+           
+           form{
+           width: 650px;
+
+               .profile-input{
+                
+                 
+                  
+                 input{
+                    width: 100%;
+                    padding: 12px;
+                    margin-top: 12px;
+                    background-color: $dark-grey;
+                    outline: none;
+                    border: 1px solid #ddcece;
+                    border-radius: 5px;
+                    
+                    font-size: large;
+                    &:focus{
+                        -webkit-box-shadow: 0px 7px 30px -10px rgba(26, 25, 26, 0.356);
+                        -moz-box-shadow: 0px 7px 30px -10px rgba(26, 25, 26, 0.315);
+                        box-shadow: 0px 7px 30px -10px rgba(26, 25, 26, 0.308);
+                    }
+                   
+                }
+                label{
+                    margin: 12px 0px;
+                    color: $magenta-blue;
+                }
+                textarea{
+                    width: 100%;
+                    padding: 12px;
+                    margin-top: 12px;
+                    background-color: $dark-grey;
+                    outline: none;
+                    border: 1px solid #EFEFEF;
+                    border-radius: 2px;
+                    font-size: large;
+                }
+               }
+           }
+       }
+       
+   }
+}

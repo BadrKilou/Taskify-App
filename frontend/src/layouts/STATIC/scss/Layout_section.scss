@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.layout_wrapper {
+  width: 80%;
+  padding: 12px;
+  margin-top: 50px;
+
+  margin: auto;
+  //   background: sandybrown;
+
+  .grid_layout {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    margin: auto;
+    flex-wrap: no-wrap;
+    border-radius: 8px;
+
+    align-items: center;
+    margin-top: 40px;
+    img {
+      width: 80%;
+    }
+
+    .layout_section {
+      //   background: saddlebrown;
+
+      max-width: 800px;
+
+      padding: 12px;
+
+      margin-top: 24px;
+      h1 {
+        color: #1a1717;
+      }
+      p {
+        line-height: 1.6;
+        padding: 12px 0px;
+        color: rgb(53, 44, 44);
+      }
+      button {
+        padding: 12px 25px;
+        background: #4d61fc;
+        border: none;
+        cursor: pointer;
+        margin-top: 15px;
+        border-radius: 2px;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .layout_wrapper {
+    width: 100%;
+    .grid_layout {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      img {
+        margin: auto;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .layout_section {
+      width: 350px;
+      margin: auto;
+      p {
+        font-size: 3vw;
+      }
+    }
+  }
+}
+.custom-shape-divider-bottom-1606864997 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1606864997 svg {
+  position: relative;
+  display: block;
+  width: calc(181% + 1.3px);
+  height: 188px;
+}
+
+.custom-shape-divider-bottom-1606864997 .shape-fill {
+  fill: #441212;
+}
+@media (max-width: 780px) {
+  .layout_wrapper {
+    width: 100%;
+    .grid_layout {
+      display: flex;
+      flex-direction: column-reverse;
+      position: relative;
+      width: 100%;
+      img {
+        width: 280px;
+      }
+    }
+  }
+  .layout_section {
+    width: 50%;
+    margin: auto;
+    margin-right: 140px;
+  }
+}
+
+@media (max-width: 275px) {
+  .grid_layout {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .layout_section {
+    width: 220px;
+  }
+}

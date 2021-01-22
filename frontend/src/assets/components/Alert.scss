@@ -1,0 +1,18 @@
+
+article{
+    padding: 4px;
+
+    .is-danger{
+        background-color: rgba(255, 52, 52, 0.836);
+        padding: 12px;
+        color: white;
+        border-radius: 3px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .is-success{
+        background-color: rgb(71, 224, 173);
+        padding: 12px;
+        color: rgb(17, 14, 14);
+        border-radius: 3px;
+    }
+}

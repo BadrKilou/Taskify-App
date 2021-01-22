@@ -1,0 +1,19 @@
+article {
+  padding: 4px;
+}
+
+article .is-danger {
+  background-color: rgba(255, 52, 52, 0.836);
+  padding: 12px;
+  color: white;
+  border-radius: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+article .is-success {
+  background-color: #47e0ad;
+  padding: 12px;
+  color: #110e0e;
+  border-radius: 3px;
+}
+/*# sourceMappingURL=Alert.css.map */

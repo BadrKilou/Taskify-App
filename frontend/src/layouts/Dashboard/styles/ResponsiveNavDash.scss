@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+$font: "Nunito", sans-serif;
+
+.navbar_dash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 120px;
+  background: #f6e6e6;
+  // background: #c31432; /* fallback for old browsers */
+  // background: -webkit-linear-gradient(
+  //   to right,
+  //   #240b36,
+  //   #c31432
+  // ); /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(
+  //   to right,
+  //   #240b36,
+  //   #c31432
+  // ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  width: 100%;
+  z-index: 8;
+  /* transform: translateX(100%); //to the right */
+  transform: translateX(100%);
+  transition: transform 500ms;
+
+  &.active {
+    transform: translateX(0);
+    transition: transform 700ms;
+  }
+
+  ul {
+    width: 100%;
+
+    height: 100%;
+    margin: 12px 0px;
+    text-align: center;
+  }
+  ul li {
+    list-style: none;
+    padding: 7px;
+    text-align: center;
+    width: 80%;
+
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+    margin: 5px 0px;
+  }
+  ul li a {
+    text-decoration: none;
+    color: rgb(51, 41, 41);
+    font-family: $font;
+    font-size: 1.7rem;
+    margin: 12px 0px;
+    padding: 12px;
+    background: rgba(202, 200, 198, 0.349);
+    border-radius: 5px;
+  }
+  #menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 18rem;
+    border: 2px solid black;
+    padding: 5px;
+    z-index: 10;
+  }
+}
+@media (min-width: 768px) {
+  .navbar_dash {
+    display: none;
+  }
+  .burger_nav {
+    outline: none;
+    border: none;
+    // background: red;
+    display: none;
+  }
+}
