@@ -3,6 +3,7 @@ const app = express();
 const cors = require("cors");
 const connectDB = require("./config/db");
 require("dotenv").config();
+import path from "path";
 
 connectDB();
 
@@ -26,6 +27,17 @@ app.use("/api/post", require("./routers/post"));
 app.use("/api/file", require("./middleware/cloudinary/cloudinary"));
 app.use("/api/multer", require("./middleware/multer/multerConfig"));
 app.use("/api", require("./routers/resetPassword"));
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "/frontend/build")));
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+  });
+} else {
+  app.get("/", (req, res) => {
+    res.send("API RUNNING SUCCESSFULLY...");
+  });
+}
 
 app.listen(PORT, (req, res) => {
   console.log(`The Server is Running Successfully on PORT ${PORT}`);
