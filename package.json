@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "build": "cd client && npm run build",
     "client": "cd client && npm start",
     "clientinstall": "cd client && npm install --prefix client",
