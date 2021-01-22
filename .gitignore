@@ -1,4 +1,4 @@
 /node_modules
-/server-side/config/default.json
+/config/default.json
 .env
 /server-side
