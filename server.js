@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 const cors = require("cors");
 const connectDB = require("./config/db");
 require("dotenv").config();
-import path from "path";
 
 connectDB();
 
@@ -28,6 +28,7 @@ app.use("/api/file", require("./middleware/cloudinary/cloudinary"));
 app.use("/api/multer", require("./middleware/multer/multerConfig"));
 app.use("/api", require("./routers/resetPassword"));
 
+// const __dirname = path.resolve();
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/build")));
   app.get("*", (req, res) => {
