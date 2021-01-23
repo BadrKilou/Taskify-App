@@ -6,14 +6,7 @@ import { setCurrent } from "../../actions/posts";
 import { useDetectOutsideClick } from "../../assets/outsideClick/UseOutsideClick";
 import { FiEdit3 } from "react-icons/fi";
 
-const EditModal = ({
-  show,
-  closeModal,
-  post: { current },
-  poster,
-  setCurrent,
-  editPost,
-}) => {
+const EditModal = ({ post: { current }, poster, setCurrent, editPost }) => {
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
   const onClick = () => setIsActive(!isActive);
@@ -54,12 +47,13 @@ const EditModal = ({
           >
             <FiEdit3 size={16} />
           </button>
-          <div></div>
+
           <div
             style={{
               zIndex: "800",
-              width: "450px",
+              maxWidth: "350px",
               height: "140px",
+              marginLeft: "125px",
             }}
             className="dropdown"
             onMouseLeave={onClick}

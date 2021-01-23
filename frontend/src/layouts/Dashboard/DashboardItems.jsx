@@ -48,7 +48,7 @@ const DashboardItems = ({
             <div class="dashboard-flex">
               <div class="nav-board">
                 <ResponsiveNavDash />
-                <p>Lorem ipsum dolor sit amet.</p>
+                <h2>Dashboard</h2>
 
                 {/* <button  onClick={logout}>LOGOUT</button> */}
                 {loading ? (
