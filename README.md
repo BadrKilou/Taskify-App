@@ -4,7 +4,7 @@
 
 ###### run: npm run dev
 
-See it live:
+See it live: [website]
 
 [website]: https://taskifyapp1.herokuapp.com
 
