@@ -1,4 +1,5 @@
 import React from "react";
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 export const Footer = () => {
   return (
@@ -33,13 +34,13 @@ export const Footer = () => {
         </ul>
         <ul class="social">
           <li>
-            <i class="fab fa-facebook-f"></i>
+            <FaFacebookF />
           </li>
           <li>
-            <i class="fab fa-twitter"></i>
+            <FaTwitter />
           </li>
           <li>
-            <i class="fab fa-instagram"></i>
+            <FaInstagram />
           </li>
         </ul>
       </footer>
